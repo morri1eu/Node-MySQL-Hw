@@ -1,0 +1,24 @@
+{
+  "name": "node-mysql-hw",
+  "version": "1.0.0",
+  "description": "Node application utilizing MySQL local server",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morri1eu/Node-MySQL-Hw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morri1eu/Node-MySQL-Hw/issues"
+  },
+  "homepage": "https://github.com/morri1eu/Node-MySQL-Hw#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^6.0.0",
+    "mysql": "^2.15.0"
+  }
+}
