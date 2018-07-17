@@ -167,3 +167,7 @@ function addProduct() {
                 })
                 setTimeout(function(){manager()},1500)            })
         }
+        function quit(){
+            connection.end()
+            process.kill(process.pid)
+        }
