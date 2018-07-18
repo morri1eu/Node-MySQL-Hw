@@ -79,7 +79,15 @@ function runBamazon(){
                     if (err) throw err
                     console.log(res.affectedRows+ 'products updated')
                     console.log("This purchase cost $"+ (amountToBuy*table[itemToBuy-1].price) )
-                setTimeout(function(){runBamazon()}, 3000)
+                    connection.query('update products set ? where ?',
+                    [
+                        {product_sales: (table[itemToBuy-1].product_sales)+(amountToBuy*table[itemToBuy-1].price)},
+                        {item_id: table[itemToBuy-1].item_id}
+                    ], function(error1,res){
+                        if (error1) throw (error1)
+                        console.log('Product_Sales updated')
+                    setTimeout(function(){runBamazon()}, 3000)
+                })
             }
             )
             })
